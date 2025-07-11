@@ -9,9 +9,9 @@ import re # Import re for regular expressions
 
 # === CONFIG ===
 # You MUST replace "YOUR_BOT_TOKEN_HERE" with your actual Telegram Bot Token
-TOKEN = "8192989056:AAHU8iGTKOw2prO1nk0v1lkr4f_YSShynGk"
+TOKEN = "7835365787:AAFWzxePtCbq6KFbjLAy95SN65Hb1ntZhK0"
 API_URL = "https://learn.aakashitutor.com/api/getquizfromid?nid="
-DEFAULT_BATCH_SIZE = 2000 # Default safe value
+DEFAULT_BATCH_SIZE = 500 # Default safe value
 # Removed MAX_CONCURRENT_SEARCHES as it's handled implicitly by the per-chat logic.
 
 # === LOGGING ===
@@ -223,7 +223,7 @@ async def search_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
         # Calculate total NIDs for range limit check
         total_range_nids = end_nid - start_nid + 1
-        if total_range_nids > 50000000: # Example limit for range to prevent extremely long scans
+        if total_range_nids > 5000000: # Example limit for range to prevent extremely long scans
             await update.message.reply_text(
                 "The requested NID range is too large\. Please specify a range of maximum 500,000 NIDs at a time\.",
                 parse_mode=constants.ParseMode.MARKDOWN_V2
