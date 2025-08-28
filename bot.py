@@ -11,7 +11,7 @@ from telegram.error import RetryAfter, TelegramError
 # === CONFIG ===
 # Read the bot token from the environment variable 'BOT_TOKEN'
 # Ensure you set this variable in your Railway project settings!
-TOKEN = "7992306448:AAFAvMtD24XiVn9lTJBt2a0hPrBu8sM1yBw"
+TOKEN = "7835365787:AAFWzxePtCbq6KFbjLAy95SN65Hb1ntZhK0"
 OWNER_ID = 7927314662        # Replace with your Telegram numeric user ID
 API_URL = "https://learn.aakashitutor.com/api/getquizfromid?nid="
 DEFAULT_BATCH_SIZE = 1000
